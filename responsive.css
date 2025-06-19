@@ -1,0 +1,39 @@
+@media(max-width:576px)
+{
+    .container 
+    {
+        width: 90%;
+    }
+
+    #img .preview .preview_img 
+{
+    width: 50%;
+}
+
+#img .preview .left 
+{
+   
+    left: 12%;
+    width: 30px;
+    height: 35px;
+    
+}
+
+#img .preview .right 
+{
+   
+    right: 12%;
+    width: 30px;
+    height: 35px;
+    
+}
+
+#img .preview .cross_btn 
+{
+    right: 15%;
+    top: 18%;
+    width: 40px;
+    height: 40px;
+}
+
+}

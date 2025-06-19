@@ -23,7 +23,7 @@ allImages.map((el, index) => {
     el.addEventListener("click", function() {
         // console.log(allImages[index].src);
         currentIndex = index;
-        preview_img.src = allImages[index].src;
+        preview_img.src = allImages[currentIndex].src;
         preview.classList.add("preview_active");
 
     
