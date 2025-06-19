@@ -1,3 +1,5 @@
+
+
 // let arr = ["green", "red","blue", 50, 'test'];
 
 // // console.log(arr[1]);
@@ -18,21 +20,27 @@ let currentIndex = 0;
 
 allImages.map((el, index) => {
 
-    el.addEventListener("click", function () {
+    el.addEventListener("click", function() {
         // console.log(allImages[index].src);
+        currentIndex = index;
         preview_img.src = allImages[index].src;
         preview.classList.add("preview_active");
 
+    
+        
+    });
 
-        rightbtn.addEventListener("click", function (){
+});
 
-            index++;
+rightbtn.addEventListener("click", function(){
+
+            currentIndex++;
             
-            if(index > allImages.length-1)
+            if(currentIndex > allImages.length-1)
             {
-                index = 0;
+                currentIndex = 0;
             }
-            preview_img.src = allImages[index].src ;
+            preview_img.src = allImages[currentIndex].src ;
             //console.log(allImages.length);
            
 
@@ -40,31 +48,22 @@ allImages.map((el, index) => {
         });
 
         leftbtn.addEventListener("click", function(){
-            index--;
-
-            // if(index >allImages.length-1)
-            // {
-            //     index=0;
-            // }
-
-            if(index <0)
+            currentIndex--;
+           
+            if(currentIndex <0)
             {
-                index = allImages.length-1;
+                currentIndex = allImages.length-1;
             }
 
-            preview_img.src = allImages[index].src;
-    })
-
-
+            //console.log(allImages[index].src);
+            preview_img.src = allImages[currentIndex].src ;
     });
-
-
-
-
-});
 
 crossbtn.addEventListener("click", function () {
     preview.classList.remove("preview_active");
 });
 
-//                       
+
+
+
+
